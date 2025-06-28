@@ -138,6 +138,13 @@ nav a {
   100% { transform: translateX(-50%); }
 }
 
+#sobreNos h2 {
+  text-align: center; 
+
+#sobreNos p {
+  margin: 20px;       
+  text-align: justify; 
+}
 
 .ondeEstamos {
   color: white;
