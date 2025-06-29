@@ -141,10 +141,102 @@ nav a {
 #sobreNos h2 {
   text-align: center; 
 
+} 
+
 #sobreNos p {
   margin: 20px;       
   text-align: justify; 
 }
+
+.titulo-depoimentos {
+  text-align: center;
+  justify-content: center; /* caso tenha flex */
+  display: flex;           /* já usado para alinhar img + h2 */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+
+.carousel-container {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+  min-height: 300px; /* ou um valor que acomode o maior depoimento */
+}
+
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* transforma em círculo */
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.carousel-slide h3 {
+  color: purple; /* roxo para o nome da pessoa */
+}
+
+.carousel-slide p {
+  color: gray; /* cinza para o depoimento */
+}
+
+
 
 .ondeEstamos {
   color: white;
