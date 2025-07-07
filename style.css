@@ -1,3 +1,6 @@
+/* =======================================================
+    ESTILO GERAL
+======================================================= */
 body {
   margin: 0;
   font-family: 'Abel', sans-serif;
@@ -10,11 +13,19 @@ body {
     #a77bb7 75%,
     #4b2262 100%
   );
+  font-size: 1.1rem; /* fonte geral aumentada */
 }
 
+/* padroniza TODOS os h2 do site */
+h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
 
-
-
+/* =======================================================
+    HEADER
+======================================================= */
 header {
   padding: 10px 30px;
 }
@@ -23,6 +34,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -32,8 +44,13 @@ header {
 }
 
 .logo img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 nav ul {
@@ -47,78 +64,51 @@ nav ul {
 nav a {
   text-decoration: none;
   color: white;
+  font-size: 1.1rem;
 }
 
 .instagram-link img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 
+/* =======================================================
+    APRESENTAÇÃO
+======================================================= */
 .apresentacao {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 30px;
-  
+  flex-wrap: wrap;
 }
 
 .apresentacao-texto {
-  max-width: 50%;
+  max-width: 600px;
 }
 
 .apresentacao-texto h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .apresentacao-texto p {
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .sagradaFamilia img {
-  width: 450px;
+  width: 350px;
   border-radius: 20px;
   padding: 20px;
 }
 
+/* =======================================================
+    ATIVIDADES
+======================================================= */
 .atividades {
   padding: 50px 20px;
   text-align: center;
-}
-
-.atividades h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.card {
-  flex: 0 0 250px;
-  background-color: white; /* aqui define branco */
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  font-size: 1rem;
-  color: #7B3A99; /* mantem o texto no tom roxo do projeto */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.card h3 {
-  margin: 10px 0 5px 0;
-}
-
-.card p {
-  font-size: 0.85rem;
-  color: #333;
 }
 
 .slider {
@@ -138,38 +128,72 @@ nav a {
   100% { transform: translateX(-50%); }
 }
 
-#sobreNos h2 {
-  text-align: center; 
+.card {
+  flex: 0 0 250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: #7b3a99;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-} 
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* =======================================================
+    SOBRE NÓS
+======================================================= */
+#sobreNos {
+  padding: 50px 20px;
+  text-align: center;
+}
 
 #sobreNos p {
-  margin: 20px;       
-  text-align: justify; 
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* =======================================================
+    DEPOIMENTOS
+======================================================= */
+.depoimentos {
+  padding: 30px 20px;
 }
 
 .titulo-depoimentos {
   text-align: center;
-  justify-content: center; /* caso tenha flex */
-  display: flex;           /* já usado para alinhar img + h2 */
-  align-items: center;
-  gap: 10px;
   margin-bottom: 30px;
 }
 
-
 .carousel-container {
-  width: 70%;
-  margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .carousel-wrapper {
   position: relative;
-  min-height: 300px; /* ou um valor que acomode o maior depoimento */
+  min-height: 320px;
 }
-
 
 .carousel-slide {
   position: absolute;
@@ -190,75 +214,174 @@ nav a {
 }
 
 .carousel-slide img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  object-fit: cover;
   margin-right: 20px;
+}
+
+.carousel-slide h3 {
+  color: purple;
+  font-size: 1.2rem;
+}
+
+.carousel-slide p {
+  color: gray;
+  font-size: 1rem;
 }
 
 .carousel-arrow {
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  font-size: 2em;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* transforma em círculo */
+  font-size: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.carousel-arrow.left {
-  left: 10px;
-}
-
-.carousel-arrow.right {
-  right: 10px;
-}
+.carousel-arrow.left { left: 10px; }
+.carousel-arrow.right { right: 10px; }
 
 .carousel-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0,0,0,0.8);
 }
 
-
-.carousel-slide h3 {
-  color: purple; /* roxo para o nome da pessoa */
-}
-
-.carousel-slide p {
-  color: gray; /* cinza para o depoimento */
-}
-
-
-
+/* =======================================================
+    ONDE ESTAMOS
+======================================================= */
 .ondeEstamos {
-  color: white;
-  padding: 50px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
-.ondeEstamos .map iframe {
+.ondeEstamos-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.map iframe {
   width: 100%;
-  height: 300px;
+  max-width: px;
+  height: 350px;
   border: 0;
-  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-.footer-contact p {
-  margin: 5px 0;
+.form-container {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
 }
 
+.form-container label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* =======================================================
+    FOOTER
+======================================================= */
 footer {
   background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 10px;
+}
+
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-instagram span {
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 0.9rem;
+}
+
+.footer-instagram img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+/* =======================================================
+    RESPONSIVIDADE
+======================================================= */
+@media (max-width: 768px) {
+  .apresentacao {
+    flex-direction: column;
+    text-align: center;
+  }
+  .apresentacao-texto {
+    max-width: 90%;
+  }
+  .sagradaFamilia img {
+    width: 90%;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ondeEstamos-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-slide {
+    flex-direction: column;
+    text-align: center;
+  }
 }
